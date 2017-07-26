@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="cvCreate.css">
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./external_libs/materialize.min.css">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+</head>
+<body id="body">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+<script src="./external_libs/jquery-cdn.js"></script>
+<script src="./external_libs/materialize.min.js"></script>
+<!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>-->
+<script src="cv1.js"></script>
+<script src="cv2.js"></script>
+<script src="cv3.js"></script>
+<script src="cvCreate.js"></script>
+
+
+<!--********************************* OPTIONS *********************************-->
+<div class="row" style="margin-top: 30px">
+    <div class="offset-s5 col 6 downloadm">
+       <a href="#" class="btn teal center download"> <i class="material-icons">file_download</i></a>
+        <a href="#" class="btn teal center downloadc">Create</a>
+
+    </div>
+</div>
+<!--********************************** INFO ********************************-->
+<div class="row" style="margin-top: 40px;">
+    <div class="offset-s1 col s2 info">
+        <a  class="btn  black-text" id="bi">Basic Info</a>
+        <a  class="btn  black-text" id="ac">Academic Credentials</a>
+        <a  class="btn  black-text" id="co">Career Objective</a>
+        <a  class="btn  grey black-text" id="pw">Project Work</a>
+        <a  class="btn  grey black-text" id="aa">Additional Activities</a>
+        <a  class="btn  grey black-text" id="ts">Technical Skills</a>
+        <a  class="btn  grey black-text" id="exp">Experience</a>
+        <p class="grey-text">* If you leave the fields in a section empty, the section will not appear in your CV.</p>
+    </div>
+
+
+        <div class="row infoforms" id="bi1">
+
+            <form class="col s12">
+                <p class="center-align"><b>Basic Information</b></p>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_telephone" type="tel" class="validate">
+                        <label for="icon_telephone">Telephone</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">home</i>
+                        <input id="icon_home" type="text" class="validate">
+                        <label for="icon_prefix">Address</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mail</i>
+                        <input id="icon_email" type="text" class="validate">
+                        <label for="icon_prefix">Email</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">people</i>
+                        <input id="icon_social1" type="text" class="validate">
+                        <label for="icon_prefix">LInkedIn Profile</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">people</i>
+                        <input id="icon_social2" type="text" class="validate">
+                        <label for="icon_prefix">Facebook Profile</label>
+                    </div>
+
+                </div>
+                <div class="btn" onclick="done('bi')">Submit</div>
+            </form>
+        </div>
+<div class="col s8 infoforms" id="ac1">
+
+    <form>
+        <p class="center"><b>Academic Credentials</b></p>
+    <div class="row">
+        <div class="col s5">
+            <input type="text" placeholder="Secondary Schooling" id="ac10">
+        </div>
+        <div class="col s3">
+            <input type="text" placeholder="Location" id="ac10l">
+        </div>
+        <div class="col s3">
+            <input type="text" placeholder="% / Cgpa" id="ac10c">
+        </div>
+    </div>
+        <div class="row">
+            <div class="col s3">
+                <input type="text" placeholder="Year" id="ac10y">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5">
+                <input type="text" placeholder="Higher Schooling" id="ac12">
+            </div>
+            <div class="col s3">
+                <input type="text" placeholder="Location" id="ac12l">
+            </div>
+            <div class="col s3">
+                <input type="text" placeholder="% / Cgpa" id="ac12c">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <input type="text" placeholder="Year" id="ac12y">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5">
+                <input type="text" placeholder="Masters /Btech" id="ac13">
+            </div>
+            <div class="col s3">
+                <input type="text" placeholder="Location" id="ac13l">
+            </div>
+            <div class="col s3">
+                <input type="text" placeholder="% / Cgpa" id="ac13c">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <input type="text" placeholder="Year" id="ac13y">
+            </div>
+        </div>
+        <div class="input-field col s12">
+            <select id="select" onchange="stream()">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Engeneering</option>
+                <option value="2">Commerce</option>
+                <option value="3">Arts</option>
+            </select>
+            <label>Materialize Select</label>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <input type="text" placeholder="EngStream" id="ac13s">
+            </div>
+        </div>
+
+        <div class="btn" onclick="done('ac')">Submit</div>
+    </form>
+</div>
+
+    <div class="col s8 infoforms" id="ts1">
+    <form>
+        <p class="center"><b>Key Skills</b></p>
+        <div class="row">
+            <div class="col s12">
+                <input type="text" placeholder="Programming Languages" id="tsp">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <input type="text" placeholder="Database" id="tsd">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <input type="text" placeholder="Operating Systems" id="tso">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <input type="text" placeholder="Designing Tools" id="tsde">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8">
+                <input type="text" placeholder="Softwares" id="tss1">
+            </div>
+            <div class="col s4">
+                <input type="text" placeholder="Rate You Self" id="tss1r">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8">
+                <input type="text" placeholder="Softwares" id="tss2">
+            </div>
+            <div class="col s4">
+                <input type="text" placeholder="Rate Your Self" id="tss2r">
+            </div>
+        </div>
+        <div class="btn" onclick="done('ts')">Submit</div>
+    </form>
+    </div>
+
+
+    <div class="col s8 infoforms" id="co1">
+        <form>
+            <p class="center"><b>Career Objectives</b></p>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line1" id="col1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line2" id="col2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s5">
+                    <input type="text" placeholder="Sub Position" id="col3">
+                </div>
+            </div>
+            <div class="btn" onclick="done('co')">Submit</div>
+        </form>
+    </div>
+
+    <div class="col s8 infoforms" id="aa1">
+        <form>
+            <p class="center"><b>Additional Activities</b></p>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line1" id="aal1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line2" id="aal2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line3" id="aal3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line4" id="aal4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line5" id="aal5">
+                </div>
+            </div>
+
+            <div class="btn" onclick="done('aa')">Submit</div>
+        </form>
+    </div>
+
+
+
+    <div class="col s8 infoforms" id="pw1">
+        <form>
+            <p class="center"><b>Project Work</b></p>
+            <div class="row">
+                <div class="col s6">
+                    <input type="text" placeholder="Title" id="pwt">
+                </div>
+                <div class="col s6">
+                    <input type="text" placeholder="Tenure" id="pwte">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s7">
+                    <input type="text" placeholder="Organisation" id="pwo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Description" id="pwob">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Description" id="pwd1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Description" id="pwd2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Description" id="pwd3">
+                </div>
+            </div>
+            <div class="btn" onclick="done('pw')">Submit</div>
+        </form>
+    </div>
+
+
+    <div class="col s8 infoforms" id="exp1">
+        <form>
+            <p class="center"><b>Expereince</b></p>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line1" id="expl1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line2" id="expl2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line3" id="expl3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" placeholder="Line4" id="expl4">
+                </div>
+            </div>
+            <a href="#bi1"><div class="btn" onclick="done('exp')">Submit</div></a>
+        </form>
+    </div>
+
+    <div class=" col s8 infoforms1 card-panel grey lighten-5">
+        <div class="row">
+            <div class="offset-s2 col 8">
+                <img src="./media/create_400h1.png" class="center">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="page-footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Basteille Private Limited</h5>
+                <p class="grey-text text-lighten-4"></p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; Follow updates at @basteille</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Secure 256 bit SSL encryption</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"> <i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Available on the Chrome Webstore</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright card-panel black">
+        <div class="container">
+            © 2014 Copyright All Rights Reserved
+            <a class="grey-text text-lighten-4 right" href="#!">Stay Updated</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

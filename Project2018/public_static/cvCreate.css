@@ -1,0 +1,32 @@
+.info{
+    display:inline-block;
+    background-color: #ffffff;
+    height:400px;
+
+}
+.info a {
+    background:linear-gradient(white,lightgray);
+    width:100%;
+}
+a:hover{
+    color:deepskyblue;
+    background-color: teal;
+}
+.infoforms{
+
+    display:inline-block;
+    background-color: #fafad2;
+    height:400px;
+}
+#bi1 , #ac1,#ts1,#co1 ,#aa1,#pw1,#exp1{
+    display: none;
+    border:1px dashed black;
+}
+.downloadm a:hover{
+    color:white;
+}
+.infoforms1{
+
+    display:inline-block;
+    height:400px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="joinus.css">
+    <link rel="stylesheet" href="./external_libs/materialize.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+</head>
+<body>
+<script src="./external_libs/jquery-cdn.js"></script>
+<script src="./external_libs/materialize.min.js"></script>
+<script src="joinus.js"></script>
+<!-- **********************     NAV BAR ************************* -->
+<nav class="nav" style="height:70px; background-color: white;">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="./media/washington-capitals11-630x350.gif" style="border-radius:50%; width:100px;"> </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="">Products</a></li>
+            <li><a href="collapsible.html">Learn-More</a></li>
+            <li><a class="btn blue-text text-lighten-1 card-panel transparent valign-wrapper" id="signin" style="margin-top:8px;"><i class="material-icons">supervisor_account</i></a></li>
+            <li><a class="btn white-text text-lighten-1 card-panel blue darken-3 valign-wrapper" id ="signup" style="margin-top:8px;">Get Started For Free</a></li>
+            <li><a href="#" data-activates="slide-out" id ="lbnav" >Leader Board</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!--*******************************************************************************************-->
+<div class="row">
+    <div class="col s12">
+        <img src="./media/walle2.svg" class="cover">
+    </div>
+</div>
+<!--**********************************************************************************************-->
+<!--<div class="row ">-->
+    <!--<div class="col s12" style="margin-top:-456px;background-color: red; opacity:0.6;position: absolute;z-index: 10; display: inline-block; width:100%;height:65vh;">-->
+    <!--</div>-->
+<!--</div>-->
+<!--*************************************************************************************************-->
+<div class="row">
+    <div class="offset-s1 col s3" style="border:1px dotted black;background-color: #ffffff;margin-top:-249px;display: inline-block;height:330px; position: absolute;z-index: 14;">
+        <p class="center" style="margin-top: 40px;">To get latest trends and updates</p>
+        <p class="center" style=" margin-top:-10px;font-size: larger;"><b>Subscribe Us</b></p>
+        <!--<div class="offset-s0 col s8" style="display: inline-block; height:30px; border: 1px solid black;">-->
+                <!--<div class="col s6"><input type="search" id="mySearch" placeholder="Search for something..">-->
+                <!--</div>-->
+            <!--</div>-->
+        <input type="search" id="mySearch" placeholder="Your Email">
+        <div class=" col s5" style=""><span class="btn red" onclick="subscribe()"><i class="material-icons">check</i></span>
+        </div>
+        <div class="row"></div>
+        <div  style=" font-size: medium;"><b>Follow Us ON</b></div>
+        <div class="btn-floating card-panel red"  style="margin-left:10px;"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+        <div class="btn-floating card-panel red"  style="margin-left:10px;"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+        <div class="btn-floating card-panel red" style="margin-left:10px;"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+    </div>
+    <div class="offset-s4 col s5" style="border:1px dotted black;background-color: #ffffff;margin-top:-269px;display: inline-block;height:370px; position: absolute;z-index: 14;">
+        <p class="center" style="margin-top: 40px; font-size: larger">Get In Touch With Us</p>
+        <div class="row" style="margin-top:-10px;">
+            <div class="offset-s1 col s10">
+                <form>
+                    <div class="row">
+                        <div class="col s7 focusbox1" style="border: 1px solid black;height:38px;"><input type="text" id="1" placeholder="Full Name" style="margin-top: -5px;border-bottom: 1px solid #ffffff;    box-shadow: 0 1px 0 0 #ffffff;" onclick="change(this.id)"></div>
+                    </div>
+                    <div class="row">
+                         <div class="col s6 focusbox2" style="border: 1px solid black;height:38px;"><input type="email" placeholder="Email" id = "2" style="   background-color: transparent;margin-top: -5px;border-bottom: 1px solid #ffffff;  box-shadow: 0 1px 0 0 #ffffff;" onclick="change(this.id)" required="required"></div>
+                          <div class="offset-s1 col s4 focusbox3" style="border: 1px solid black;height:38px;"><input type="tel"  placeholder="Phone no" id = "3" style="margin-top: -5px;border-bottom: 1px solid #ffffff;    box-shadow: 0 1px 0 0 #ffffff;" onclick="change(this.id)"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 focusbox4" style="border: 1px solid black;height:78px;"><input type="text" id="4" placeholder="Your Message" name="msg" style="margin-top: -5px;border-bottom: 1px solid #ffffff;    box-shadow: 0 1px 0 0 #ffffff;" onclick="change(this.id)"></div>
+                    </div>
+                    <input type="submit" class="btn red right" onclick="messagecollect()">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="offset-s9 col s2" style="border:1px dotted black;background-color: #ffffff;margin-top:-249px;display: inline-block;height:330px; position: absolute;z-index: 14;">
+
+        <div  style=" font-size: medium; margin-top: 20px;color:#4f4f00;" class="center"><b>Get a cup of coffee </b></div>
+
+        <div class="row" style="margin-top:15px; border-left:1px solid lightgray;"><div class="col s12"><i class="fa fa-address-card fa-lg" aria-hidden="true"></i> &nbsp;<b>Basteille</b></div>
+        </div>
+        <div class="row" style="margin-top:-18px; border-left:1px solid lightgray;"><div class="col s12">N-185 3rd Floor</div></div>
+        <div class="row" style="margin-top:-18px; border-left:1px solid lightgray;"><div class="col s12">Sector-12</div></div>
+        <div class="row" style="margin-top:-18px; border-left:1px solid lightgray;"><div class="col s12">Noida-201301</div></div>
+        <div class="row" style="margin-top:-18px; border-left:1px solid lightgray;"><div class="col s12">Uttar Pradesh</div></div>
+
+        <div style=" font-size: medium; margin-top: 20px; color:#4f4f00;" class="center"><b>Need Help? </b></div>
+        <div class="row" style="margin-top:10px;"><div class="col s12"><i class="tiny material-icons">call</i> +91 9873222548 </div></div>
+        <div class="row" style="margin-top:-20px;"><div class="col s12"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i> +91 9873222548 </div></div>
+        <div class="row" style="margin-top:-20px;"><div class="col s12"><i class="tiny material-icons">mail</i> info@bateille.in </div></div>
+
+    </div>
+
+
+
+</div>
+<!--*************************************************************************************-->
+
+    <!--<div class="footer-copyright card-panel black" style="margin-top: 200px; height:40px">-->
+        <!--<div class="container white-text">-->
+           <!--<div class="left"> © 2014 Copyright All Rights Reserved</div>-->
+            <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</body>-->
+</html>

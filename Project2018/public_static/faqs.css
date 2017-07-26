@@ -1,0 +1,36 @@
+.nav {
+    position:fixed;
+}
+#nav-mobile li a {
+    color: darkgrey;
+}
+#body {
+}
+#nav-mobile li a:hover {
+    background-color:transparent;
+}
+.collapsible-header{
+    border-left: 6px solid red;
+}
+.collapsible-body{
+    background-color: #dddddd;
+}
+.collapsible{
+    border-top:none !important;
+    border-right:none    !important;
+    border-left:none   !important;
+    border-bottom:none !important;
+    box-shadow: none      !important;
+
+}
+.collapsible li{
+        margin-bottom: 50px;
+    border:1px solid #dddddd;
+}
+img{
+    width:60px;
+    height:60px;
+}
+input{
+    background-color: whitesmoke;
+}

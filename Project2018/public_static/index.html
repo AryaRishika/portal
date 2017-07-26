@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="1.css">
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./external_libs/materialize.min.css">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+</head>
+<body id="body">
+
+<script src="./external_libs/jquery-cdn.js"></script>
+<script src="./external_libs/materialize.min.js"></script>
+
+<!-- ********************* LEADER-BOARD ********************** -->
+
+<ul id="slide-out" class="side-nav" style="background-color:#2b2b2b; width:260px;" >
+    <div class="user-view" style=" border-bottom: 1px solid #ffffff;">
+        <div>
+            <img src="./media/gcap2.png" style="transform: translateX(80%); margin-top:25px;">
+        </div>
+        <div class="row">
+            <div class="col s12 center-align white-text" style="margin-top:0px; font-size: larger;"><b>Basteille</b></div>
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="side_clra"></div>
+        <a href="faqs.html"><div class="side_clr1"><b>Faqs</b></div></a>
+    </div>
+
+    <div class="parent">
+        <div class="side_clrb" style="background-color: #fffff9;"></div>
+        <a href="joinus.html"><div class="side_clr2"><b>Contact_us</b></div></a>
+    </div>
+
+    <div class="parent">
+        <div class="side_clrc" style="background-color: #fffff9;"></div>
+        <a href=""><div class="side_clr3"><b>More</b></div></a>
+    </div>
+
+    <div class="row">
+        <div class="col s12" style="border-top:1px solid #fffef0; border-bottom:1px solid #fffef0;">
+            <div class="row">
+                <div class="offset-s1 col s11 android tooltipped" data-position="bottom" data-delay="50" data-tooltip="Coming soon">
+                    <span>
+                        <img src="./media/andr.png" style="margin-top: 7px;">
+                        <span style="color:#161616">Get our android app</span>
+
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12" style="border-bottom:1px solid #ffffff;">
+            <div class="row">
+                <div class="col s12 center-align white-text"><b>Follow us on</b></div>
+            </div>
+            <div class="row">
+                <div class="col s2"><a><img src="./media/fb.png"></a></div>
+                <div class="offset-s1 col s2" style="margin-top: 5px;"><a><img src="./media/insta.png"></a></div>
+                <div class="offset-s1 col s2" style="margin-top: 9px;"><a><img src="./media/twitter.png"></a></div>
+                <div class=" col s2" style="margin-top: 0px;"><a><img src="./media/gplus.png"></a></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 center-align white-text" style="margin-top: -15px;"><b>Rishika@2017</b></div>
+    </div>
+
+</ul>
+
+
+<!-- **********************     NAV BAR ************************* -->
+<nav class="nav" style="height:70px; background-color: white;">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="./media/washington-capitals11-630x350.gif" style="border-radius:50%; width:100px;"> </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a  href="#modal1" class="btn blue-text text-lighten-1 card-panel transparent valign-wrapper" id="signin" style="margin-top:8px;"><i class="material-icons">supervisor_account</i></a></li>
+            <li><a class="btn white-text text-lighten-1 card-panel blue darken-3 valign-wrapper" id ="signup" style="margin-top:8px;">Get Started For Free</a></li>
+            <li><a href="#" data-activates="slide-out" id ="lbnav" >Leader Board</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<!-- ****************** signup form box **********************-->
+<form action="http://localhost:5000/add_entry"
+      method="post">
+    <div class="row">
+        <div class="box2 offset-s3 col s6" id="p_form">
+            <div class="row"><div class="right"><a href="#" id="closef"><i class="material-icons">close</i></a></div></div>
+            <div class="row"><div class="offset-s2 col s8">SIGN-UP</div></div>
+            <div class="row"><div class="offset-s2 col s8">Please use your work email address, so we can connect you with your team in Basteille.</div></div>
+            <div class="row"><div class="offset-s2 col s7">Email-Id</div></div>
+            <div class="row">
+                <div class="offset-s2 col s10"><input id="eid" name ="e" type="email" placeholder="xyz@gmail.com" required></div>
+            </div>
+
+            <div class="row"><div class="offset-s2 col s7">User_name</div></div>
+            <div class="row">
+                <div class="offset-s2 col s10"><input id="uid" name="u" type="text" placeholder="xyz_12" required></div></div>
+
+            <div class="row"><div class="offset-s2 col s7">Password</div></div>
+            <div class="row">
+                <div class="offset-s2 col s10"><input id="pid" name="p" type="password" required></div>
+            </div>
+            <input type="submit">
+
+
+
+        </div>
+    </div>
+</form>
+<!-- **************************Sign-in ***************************-->
+<form action="http://localhost:5000/check_entry"
+      method="post">
+    <div class="row">
+        <div class="box1 offset-s3 col s6" id="p1_form">
+
+
+            <div class="row">
+                <div class="right">
+                    <a href="#" id="close1f"><i class="material-icons">close</i></a>
+                </div>
+            </div>
+
+
+            <div class="row"><div class="offset-s2 col s8 center-align"><b>LOGIN</b></div></div>
+            <div class="row"><div class="offset-s1 col s10 offset-s1"><hr></div></div>
+
+            <!--<div class="row">-->
+                <!--<div class="offset-s2 input-field col s8">-->
+                    <!--<input id="pid1" type="password" class="validate" placeholder="Password" name="p1">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class=" offset-s2 input-field col s8">-->
+                    <!--<input type="text" id="first_name"  placeholder="User_name" name="u1">-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="row">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name" type="text" class="validate" name="u1">
+                            <label for="first_name">First Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">security</i>
+                            <input id="pid1" type="password" class="validate" name="p1">
+                            <label for="pid1">Password</label>
+                        </div>
+                    </div>
+            </div>
+            <input type="submit">
+        </div>
+    </div>
+</form>
+<!-- ******************** COVER PIC ************************* -->
+
+
+<div class="row">
+    <div class="col s12 cover">
+        <div class="row"><div class="offset-s5 center-align"><h1 style="color: white; margin-top:220px;">Move Work Forward</h1></div></div>
+        <div class="row"><div class="offset-s6 center-align"><h5 style="color: white; margin-top:30px;">Basteille is the easiest way for teams to track their work—and get results</h5></div></div>
+    </div>
+</div>
+
+<!-- ********************** PARTNERS ********************* -->
+<div class="row">
+    <div class="col s12">
+        <div class="row"><div class="center-align"><img src="./media/partners.jpg" style="width:150px;height:150px;"></div></div>
+        <div class="row"><div class="center-align"><h3><b>Great teams get great results</b></h3></div></div>
+        <div class="row" style="margin-top: -20px;"><div class="center-align"><h3><b>with Basteille</b></h3></div></div>
+        <div class="row"><div class="center-align"><h5 style="color:darkgrey;">From companies with off-the-charts growth to local </h5></div></div>
+        <div class="row"><div class="center-align"><h5 style="color:darkgrey; margin-top:-10px;">businesses and non-profits, teams love Basteille.</h5></div></div>
+        <div class="offset-s1 col s2"><img src="./media/p1.png" style="width:100px;height:100px;"></div>
+        <div class="col s3"><img src="./media/p2.jpg" style="width:100px;height:100px;"></div>
+        <div class="col s3"><img src="./media/p3.jpg" style="width:100px;height:100px;"></div>
+        <div class="col s3"><img src="./media/p3.png" style="width:100px;height:100px;"></div>
+        <div class="row"><div class="center-align"><a href="#"  class="btn card-panel amber blue-text text-darken-4">See what teams do #with Basteille</a></div></div>
+    </div>
+</div>
+
+<!-- ***************************  picture portal ****************************** -->
+
+<div class="row picp">
+    <div class="col s12">
+        <div class="row">
+            <div class="offset-s1 col s7"><img style="height:90vh; margin-top:70px;" id="img1" src="./media/1.gif">
+            </div>
+
+
+
+
+
+
+
+            <div class="col s4">
+                <div class="row" style="padding-top:140px;"><div class="col s12"><h3 style="color:white;"><b>Track projects from start to finish </b></h3></div></div>
+                <div class="row"><div class="col s12"><h5 style="color:white;">Responsibilities and next steps are clear, so you can shoot for the moon—and get there.</h5></div></div>
+                <div class="row" style="padding-top: 10px;"><div class="col s12"><a href="#" class="btn white-text">Learn more</a></div></div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- *************************** Fixed action bar ************************ -->
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red" href="#modal1">
+        <i class="large material-icons">message</i>
+    </a>
+</div>
+<!--***************************************************************************-->
+
+<div id="modal1" class="modal open" style="z-index: 1003; display: none; opacity: 1; transform: scaleX(1); top: 10%;">
+    <div class="modal-content">
+        <div class="row" style="margin: 0px;">
+            <div class="col s8 card-panel red darken-3" style="display: inline-block;height:370px;">
+                <div class="row" style="margin-top:30px;">
+                    <div class="offset-s2 col s2"><img src="./media/user.png" class="kya1"></div>
+                    <div class="col s4 white-text" style="margin-top: 10px;"><b style="font-size: x-large;">Login</b></div>
+                </div>
+
+                <div class="row">
+                    <div class="offset-s1 col s10">
+                        <form action="http://localhost:5000/check_entry"
+                              method="post">
+                            <input type="text" name="u1" class=" kya card-panel white black-text" placeholder="User Name">
+                            <input type="password" name="p1" class=" kya card-panel white black-text" placeholder="Password">
+                            <input type="submit" class="btn white black-text">
+
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="col s4 card-panel grey darken-3" style="display: inline-block;height:370px;">
+                <div class="row" style="margin-top:13px;">
+                    <div class="offset-s3 col s6">
+                        <img src="./media/connect1.png" class="kya1">
+                    </div>
+                    <p class="center white-text"><b>Connect</b> and <b>Share</b>  to grow</p>
+                </div>
+                <div class="row" style="margin-top:13px;">
+                    <div class="offset-s3 col s6">
+                        <img src="./media/com.png" class="kya1">
+                    </div>
+                    <p class="center white-text"><b>Discover</b> everything near you</p>
+                </div>
+
+                <div class="row" style="margin-top:13px;">
+                    <div class="offset-s3 col s6">
+                        <img src="./media/pla.png" class="kya1">
+                    </div>
+                    <p class="center white-text"><b>Prepare</b> with us</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+<a href="https://icons8.com/icon/42804/Facebook">Facebook icon credits</a>
+
+
+<script src="pop-up-form.js"></script>
+<!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>-->
+
+</body>
+</html>

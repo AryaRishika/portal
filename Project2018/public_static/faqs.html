@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="faqs.css">
+    <link rel="stylesheet" href="./external_libs/materialize.min.css">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+</head>
+<body>
+<script src="./external_libs/jquery-cdn.js"></script>
+<script src="./external_libs/materialize.min.js"></script>
+<script src="faqs.js"></script>
+
+
+<!--*****************************************************-->
+<nav class="nav" style="height:70px; background-color: white; margin-top: -20px;">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="./media/washington-capitals11-630x350.gif" style="border-radius:50%; width:100px;"> </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a>hiiii</a>
+        <a>yoyoy</a>
+        <a>yoyoy</a>
+        <a>yoyoy</a>
+        <a class="black-text">
+            <input type="search" class="card-panel red darken-4 white-text" style="width:290px;"  id="sfaq" placeholder="Search...." onchange="searchfaq()">
+        </a>
+        <a class="btn grey white-text" style="height:43px;" id="afaq" onclick="palti()"><b style="font-size: medium;">GO</b></a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+            <a href="index.html"><i class="material-icons">home</i></a>
+            </li>
+               </ul>
+    </div>
+</nav>
+<!--******************************************************-->
+<p class="center black-text" style="font-size: larger;transform: translateY(380%);"><b>FAQS</b></p>
+
+<!--*******************************************************************-->
+<div class="row" style="margin-top: 150px;">
+    <div class="offset-s1 col s10">
+    <ul class="collapsible" data-collapsible="accordion">
+        <li  id="profile" >
+            <div class="collapsible-header" id="profilee"><i class="material-icons">account_circle</i>What is ‘My Profile’?</div>
+            <div class="collapsible-body"><span>It is your profile where you view, update & delete your personal information</span></div>
+        </li>
+        <li id="update">
+            <div class="collapsible-header" id="updatee"><i class="material-icons">info</i>How do I update my information?</div>
+            <div class="collapsible-body">
+                <p> It is very easy to update your information</p>
+                <p>-Go to your profile</p>
+                <p>-Click on ‘My Profile’</p>
+                <p>-Don’t know</p>
+                <p>-Again don’t know</p>
+            </div>
+        </li>
+        <li id="items">
+            <div class="collapsible-header" id="itemse"><i class="material-icons">info</i>What are ‘My Items’ in ‘My Profile’ section?</div>
+            <div class="collapsible-body"><span>Items are the various companies along with their info</span></div>
+        </li>
+
+        <li id="resume">
+            <div class="collapsible-header" id="resumee"><i class="material-icons">info</i>How can i download my resume</div>
+            <div class="collapsible-body"><span>
+                <p> It is very easy to create and download</p>
+                <p>-Go to your profile</p>
+                <p>-Click on ‘Create CV’</p>
+                <p>-Click on desired Layout</p>
+                <p>-Fill the forms</p>
+                <p>Click on create then download sign</p>
+            </span>
+            </div>
+        </li>
+        <li id="eligible">
+            <div class="collapsible-header" id="eligiblee"><i class="material-icons">info</i>How the eligibility results generated</div>
+            <div class="collapsible-body"><span>Results are produced on the basis of our collected database</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">info</i>What are ‘My Items’ in ‘My Profile’ section?</div>
+            <div class="collapsible-body"><span>Items are the various companies along with their info</span></div>
+        </li>
+
+        <li>
+            <div class="collapsible-header"><i class="material-icons">info</i>What are ‘My Items’ in ‘My Profile’ section?</div>
+            <div class="collapsible-body"><span>Items are the various companies along with their info</span></div>
+        </li>
+
+        <li id="profile1">
+            <div class="collapsible-header" id="profile1e"><i class="material-icons">info</i>How to manage my Profile</div>
+            <div class="collapsible-body"><span>Items are the various companies along with their info</span></div>
+        </li>
+
+        <li>
+            <div class="collapsible-header"><i class="material-icons">info</i>What are ‘My Items’ in ‘My Profile’ section?</div>
+            <div class="collapsible-body"><span>Items are the various companies along with their info</span></div>
+        </li>
+
+        <li>
+            <div class="collapsible-header"><i class="material-icons">info</i>What are ‘My Items’ in ‘My Profile’ section?</div>
+            <div class="collapsible-body"><span>Items are the various companies along with their info</span></div>
+        </li>
+
+        <li id="place">
+            <div class="collapsible-header" id="placee"><i class="material-icons">info</i>How to start preparing for placements?</div>
+            <div class="collapsible-body"><span>Items are the various companies along with their info</span></div>
+        </li>
+
+
+    </ul>
+</div>
+</div>
+
+
+
+<!--*********************************************************************-->
+<div class="fixed-action-btn">
+    <a href="#modal1"  class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+    </a>
+</div>
+
+<!--******************************************************-->
+<div id="modal1" class="modal open" style="z-index: 1003; display: none; opacity: 1; transform: scaleX(1); top: 10%;">
+    <div class="modal-content">
+        <div class="row" style="margin: 0px;">
+            <div class="col s8 card-panel red darken-3" style="display: inline-block;height:370px;">
+                <div class="row" style="margin-top:30px;">
+                    <div class="offset-s2 col s2"><img src="./media/user.png"></div>
+                    <div class="col s4 white-text" style="margin-top: 10px;"><b style="font-size: x-large;">Login</b></div>
+                </div>
+
+                <div class="row">
+                    <div class="offset-s1 col s10">
+                        <form action="http://localhost:5000/check_entry"
+                              method="post">
+                            <input type="text" name="u1" class="card-panel white black-text" placeholder="User Name">
+                            <input type="password" name="p1" class="card-panel white black-text" placeholder="Password">
+                            <input type="submit" class="btn white black-text">
+
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="col s4 card-panel grey darken-3" style="display: inline-block;height:370px;">
+                <div class="row" style="margin-top:13px;">
+                    <div class="offset-s3 col s6">
+                        <img src="./media/connect1.png">
+                    </div>
+                    <p class="center white-text"><b>Connect</b> and <b>Share</b>  to grow</p>
+                </div>
+                <div class="row" style="margin-top:13px;">
+                    <div class="offset-s3 col s6">
+                        <img src="./media/com.png">
+                    </div>
+                    <p class="center white-text"><b>Discover</b> everything near you</p>
+                </div>
+
+                <div class="row" style="margin-top:13px;">
+                    <div class="offset-s3 col s6">
+                        <img src="./media/pla.png">
+                    </div>
+                    <p class="center white-text"><b>Prepare</b> with us</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

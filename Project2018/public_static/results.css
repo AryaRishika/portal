@@ -1,0 +1,19 @@
+.nav {
+    position:fixed;
+    background-color: #fffff9;
+    height:60px;
+}
+#nav-mobile li a {
+    color: darkgrey;
+    margin-top: -8px;
+}
+#nav-mobile li{
+    height:60px;
+}
+#nav-mobile li a:hover {
+    background-color: transparent;
+    color:deepskyblue;
+}
+#nav-mobile1 li a:hover {
+    background-color: transparent;
+}

@@ -1,0 +1,22 @@
+.nav {
+    position:fixed;
+}
+#nav-mobile li a {
+    color: darkgrey;
+}
+#body {
+}
+#nav-mobile li a:hover {
+    background-color:transparent;
+}
+.cover{
+
+    background-image: linear-gradient(rgba(237, 30, 36, 0.7),rgba(237, 30, 36,0.7));
+    width:100%;
+    height:74vh;
+
+}
+input{
+    border-bottom: 1px solid #ffffff;
+
+}

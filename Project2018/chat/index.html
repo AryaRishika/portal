@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <linl rel="script" href="https://code.jquery.com/jquery-3.2.1.min.js"></linl>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket=io('/');
+    var i=0;
+    var owner;
+
+    function setUsername(){
+         owner=document.getElementById('user').value;
+        var id1 = socket.io.engine.id;
+        alert(id1);
+        var obj={user: document.getElementById('user').value,
+            id:id1};
+        socket.emit('set',obj);
+    };
+    function show_list()
+    {
+      socket.emit('showList',"hi");
+    };
+    socket.on('list',function(data){
+
+        console.log(data);
+    });
+    function find_friend(n)
+    {
+        socket.emit('findFriend',{a:document.getElementById('friend1').value,b:n});
+
+    };
+    socket.on('come_chat',function(data){
+
+
+        socket.emit('join_room',data);
+    });
+
+    function send_message(n)
+    {
+        var message1=document.getElementById('msg1').value;
+        var obj={
+            message:message1,
+            user:owner,
+            a:n
+        };
+        console.log(obj);
+        socket.emit('connecttor',obj)
+    }
+
+    socket.on('newmsg',function(data){
+
+        if(data.a==1)
+        document.getElementById('chat1').innerHTML += '<div><b>' + data.user + '</b>: ' + data.message + '</div>'
+        console.log(data);
+    });
+</script>
+<body>
+<input type="text" id="user">
+<button id="join" onClick="setUsername()">Authenticate</button>
+<button id="show_list" onClick="show_list()">Show connected clients</button>
+<hr>
+<div class="parent">
+<div>
+    <input type="text" id="friend1" placeholder="name of friend to chat">
+    <button id="chat11" onClick="find_friend(1)">Chat</button>
+    <input type="text" id="msg1">
+    <button id="send_msg1" onclick="send_message(1)">Send</button>
+    <div id="chat1">hiiiii</div>
+</div>
+    <hr>
+    <hr>
+
+</div>
+</body>
+</html>

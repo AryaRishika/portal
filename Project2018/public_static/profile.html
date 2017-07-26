@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="profile.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./external_libs/materialize.min.css">
+   <meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+</head>
+<body>
+
+
+<script src="./external_libs/jquery-cdn.js"></script>
+<script src="./external_libs/materialize.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script src="cv1.js"></script>
+<script src="cv2.js"></script>
+<script src="profile.js"></script>
+
+<!-- ***********************  NAVIGATION BAR  ******************* -->
+<div class="row" style="height:40px;">
+    <nav class="nav">
+        <div class="nav-wrapper">
+
+            <a href="#" class="brand-logo"><img src="./media/washington-capitals11-630x350.gif" style="border-radius:50%; width:100px;"> </a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#">Clothings</a></li>
+                <li><a>Create , maintain and publish your CVs</a></li>
+            </ul>
+
+            <ul id="nav-mobile1" class="right hide-on-med-and-down">
+                <li><a href="index.html" class="grey-text darken-1 track" onclick="logout()">Logout</a></li>
+                <li><a href="elig.html" class="grey-text darken-1">View Companies</a></li>
+                <li>
+                    <div class="offset-s1 col s11 android tooltipped" data-position="bottom" data-delay="50" data-tooltip="NOt Available"></div>
+                    <a href="#" class="btn card-panel yellow darken-3 white-text">Upgrade</a>
+
+
+                </li>
+                <li>
+                    <a href="#" onclick="details()">
+                        <img src="./media/users%20(2).png" style="border-radius:50%; width:80px; height:60px;">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+
+<!--********************************User info**********************************************-->
+
+<div class="row">
+    <div class="offset-s3 col s6 user">
+        <div class="row"><div class="right"><a href="#" id="closef"><i class="material-icons">close</i></a></div></div>
+
+        <div class="row card-panel red">
+            <div class="offset-s4 col s5 white-text" style="font-size: large;"><b>Profile Settings</b></div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s6"><a href="#test1">Account Details</a></li>
+                    <li class="tab col s6"><a class="active" href="#test2">Edit</a></li>
+                </ul>
+            </div>
+            <div id="test1" class="col s12">
+                <div class="row" style="margin-top: 10%;">
+
+                    <div class="row">
+                        <div class="offset-s1 col s4">
+                            <a><i class="medium material-icons black-text">person</i></a>
+                        </div>
+                        <div class="col s6 card-panel orange lighten-4 " style="border: 1px dotted black; margin-top: 15px;">
+                            <a id="u" class="black-text">RISHIKA ARYA</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-s1 col s4">
+                            <a><i class=" medium material-icons black-text">mail</i></a>
+                        </div>
+                        <div class="col s6 card-panel orange lighten-4 " style="border: 1px dotted black; margin-top: 15px;">
+                            <a id="e" class="black-text">aenaarya@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-s1 col s4">
+                            <a><i class=" medium material-icons black-text">security</i></a>
+                        </div>
+                        <div class="col s6 card-panel orange lighten-4 " style="border: 1px dotted black; margin-top: 15px;">
+                            <a id="p" class="black-text">Rishik@96</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="test2" class="col s12">
+
+                <form action="http://localhost:5000/changep" method="post">
+                <div class="row" style="margin-top: 10%;">
+                    <div class="row">
+                        <div class="offset-s1 col s4">
+                            <a>Old Password</a>
+                        </div>
+                        <div class="col s6">
+                            <a  class="black-text"><input type="password" id="old_p" name="u"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-s1 col s4">
+                            <a>New Password</a>
+                        </div>
+                        <div class="col s6">
+                            <a  class="black-text"><input type="password" id="new_p" name="p"></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-s1 col s4">
+                            <a>Confirm Password</a>
+                        </div>
+                        <div class="col s6 ">
+                            <a  class="black-text"><input type="password" id="confirm_p"></a>
+                        </div>
+                    </div>
+                    <!--<button id="pass_change">Change</button>-->
+                    <input type="submit">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--****************************** Slider *************************************************-->
+<div class="slider" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+<ul class="slides">
+    <li class="velocity-animating active" style="opacity: 0.996265; transform: translateX(0px) translateY(0px);">
+        <img src="./media/1.jpg" style=""> <!-- random image -->
+        <div class="caption center-align" style="opacity: 0; transform: translateY(-100px) translateX(0px);">
+            <h3>Start preparing with us</h3>
+            <h5 class="light grey-text text-lighten-3">Long way to go...</h5>
+        </div>
+    </li>
+    <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
+        <img src="./media/pla.png" style="background-image: url(&quot;https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&amp;fm=jpg&amp;s=0e993004a2f3704e8f2ad5469315ccb7&quot;);"> <!-- random image -->
+        <div class="caption left-align">
+            <h3>Big Companies</h3>
+            <h5 class="light grey-text text-lighten-3">Have faith</h5>
+        </div>
+    </li>
+    <li class="velocity-animating" style="opacity: 0.00373486; transform: translateX(0px) translateY(0px);">
+        <img src="./media/placement.jpg" style="background-image: url(&quot;https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&amp;fm=jpg&amp;s=6a4fc66161293fc4a43a6ca6f073d1c5&quot;);"> <!-- random image -->
+        <div class="caption right-align velocity-animating">
+            <h3>Many Competitors , but</h3>
+            <h5 class="light grey-text text-lighten-3">Believe you can</h5>
+        </div>
+    </li>
+</ul>
+<ul class="indicators"><li class="indicator-item active"></li><li class="indicator-item"></li><li class="indicator-item"></li></ul></div>
+
+
+
+<div class="row" style="margin-top: -150px;">
+    <div class=" offset-s9 col s2  btn card-panel black white-text right cv"><a href="#layouts" class="white-text">Create Your CV</a></div>
+</div>
+
+
+
+<!--***************************** Layouts **********************************************-->
+
+<div class="row" id="layouts">
+    <div class=" offset-s2 col s10 display">
+
+
+        <div class="box">
+            <img class="loaded1" src="./media/pdf1-1.jpg">
+            <div class="row">
+                <div class="cols 3 product_info">FUNCTIONAL</div>
+            </div>
+            <div style="margin-top:-14px;">
+                <div class="row" style="display: inline-block;">
+                    <div class="cols 3 product_cut"></div>
+                </div>
+                <span class="product_price">Emphasies more on acheivements</span>
+                <span class="red-text"></span>
+            </div>
+            <a href="cvCreate.html"><div class="btn-flat card-panel teal product" id="cv1" onClick="addToCart(this.id)">Create </div></a>
+
+        </div>
+
+
+        <div class="box">
+            <img class="loaded1" src="./media/fced3511-df88-4196-83db-67921565bae8-1.jpg">
+            <div class="row">
+                <div class="cols 3 product_info center-align">COMBINED CV</div>
+            </div>
+            <div style="margin-top:-14px;">
+                <div class="row" style="display: inline-block;">
+                    <div class="cols 3 product_cut"></div>
+                </div>
+                <span class="product_price">Both Functional & chrono</span>
+                <span class="red-text"></span>
+            </div>
+            <a href="cvCreate.html"><div class="btn-flat card-panel teal" id="cv2" onClick="addToCart(this.id)">Create</div></a>
+
+        </div>
+
+
+        <div class="box">
+            <img class="loaded1" src="./media/cv3.jpg">
+            <div class="row">
+                <div class="cols 3 product_info center-align">CHRONOLOGICAL CV</div>
+            </div>
+            <div style="margin-top:-14px;">
+                <div class="row" style="display: inline-block;">
+                    <div class="cols 3 product_cut"></div>
+                </div>
+                <span class="product_price">Casual approach</span>
+                <span class="red-text"></span>
+            </div>
+            <a href="cvCreate.html"><div class="btn-flat card-panel teal" id="cv3" onClick="addToCart(this.id)">Create</div></a>
+
+        </div>
+
+    </div>
+</div>
+
+<footer class="page-footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Basteille Private Limited</h5>
+                <p class="grey-text text-lighten-4"></p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; Follow updates at @basteille</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Secure 256 bit SSL encryption</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"> <i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Available on the Chrome Webstore</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright card-panel black">
+        <div class="container">
+            © 2014 Copyright All Rights Reserved
+            <a class="grey-text text-lighten-4 right" href="#!">Stay Updated</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
